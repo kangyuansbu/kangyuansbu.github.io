@@ -1,0 +1,52 @@
+<html>
+<head>
+    <style>
+        .logoutLblPos{
+          position:fixed;
+          right:20px;
+          top:20px;}
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/css/query-builder.default.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/jquery.query-builder/2.3.3/js/query-builder.standalone.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    {#    custom files#}
+    <script type="text/javascript" src="static/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}">
+
+</head>
+<body>
+<header>
+    <h2>Query Builder</h2>
+</header>
+    
+<form align = "right" name="form1" method="post" action="/logout">
+  <label class="logoutLblPos">
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+ </form>
+    
+<div id="builder"></div>
+<!-- <button class="btn btn-success" id="btn-set">Set Rules</button> -->
+<button class="btn btn-primary" id="btn-get">Get Rules</button>
+<button class="btn btn-warning" id="btn-reset">Reset</button>
+<p style="padding-top: 10px;padding-bottom: 5px;padding-right: 10px"><label style="display:none;padding: 5px" id="countLable" visible="false"></label></p>
+
+<div id="showData" class="resultHolder"></div>
+
+
+</body>
+</html>
